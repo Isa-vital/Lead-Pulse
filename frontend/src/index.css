@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Custom design tokens */
+@theme {
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+
+  --color-success-50: #f0fdf4;
+  --color-success-500: #22c55e;
+  --color-success-600: #16a34a;
+
+  --color-warning-50: #fffbeb;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+
+  --color-danger-50: #fef2f2;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #dc2626;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Dark mode global transitions */
+html {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Dark mode global overrides for common page elements */
+.dark body {
+  background-color: #111827;
+  color: #f3f4f6;
+}
+
+/* Cards and containers */
+.dark .bg-white {
+  background-color: #1f2937;
+}
+
+.dark .bg-gray-50 {
+  background-color: #111827;
+}
+
+.dark .bg-gray-100 {
+  background-color: #1f2937;
+}
+
+/* Text colors */
+.dark .text-gray-900 {
+  color: #f9fafb;
+}
+
+.dark .text-gray-800 {
+  color: #f3f4f6;
+}
+
+.dark .text-gray-700 {
+  color: #e5e7eb;
+}
+
+.dark .text-gray-600 {
+  color: #d1d5db;
+}
+
+.dark .text-gray-500 {
+  color: #9ca3af;
+}
+
+/* Borders */
+.dark .border-gray-200 {
+  border-color: #374151;
+}
+
+.dark .border-gray-100 {
+  border-color: #374151;
+}
+
+.dark .border-gray-300 {
+  border-color: #4b5563;
+}
+
+/* Hovers */
+.dark .hover\:bg-gray-50:hover {
+  background-color: #374151;
+}
+
+.dark .hover\:bg-gray-100:hover {
+  background-color: #374151;
+}
+
+/* Inputs and forms */
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: #1f2937;
+  border-color: #4b5563;
+  color: #f3f4f6;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #6b7280;
+}
+
+.dark input:focus,
+.dark select:focus,
+.dark textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+/* Tables */
+.dark th {
+  background-color: #1f2937;
+  color: #d1d5db;
+  border-color: #374151;
+}
+
+.dark td {
+  border-color: #374151;
+}
+
+.dark tr:hover td {
+  background-color: #374151;
+}
+
+/* Divide */
+.dark .divide-gray-200 > * + * {
+  border-color: #374151;
+}
+
+/* Ring */
+.dark .ring-gray-200 {
+  --tw-ring-color: #374151;
+}
+
+/* Shadows get subtler in dark mode */
+.dark .shadow-sm,
+.dark .shadow,
+.dark .shadow-md,
+.dark .shadow-lg,
+.dark .shadow-xl {
+  --tw-shadow-color: rgba(0, 0, 0, 0.3);
+}
+
